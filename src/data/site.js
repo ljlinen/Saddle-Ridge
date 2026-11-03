@@ -10,11 +10,13 @@ export const nav = [
 ];
 
 // Files live in /public/images
+const img = name => `${import.meta.env.BASE_URL}images/${name}`;
+
 export const images = {
-  logo: '/images/logo.svg',
-  hero: '/images/hero-horses.jpg',
-  about: '/images/about-horse.jpg',
-  gallery: ['/images/gallery-1.jpg', '/images/gallery-2.jpg', '/images/gallery-3.jpg'],
+  logo: img('logo.svg'),
+  hero: img('hero-horses.jpg'),
+  about: img('about-horse.jpg'),
+  gallery: [img('gallery-1.jpg'), img('gallery-2.jpg'), img('gallery-3.jpg')],
 };
 
 export const hero = {
