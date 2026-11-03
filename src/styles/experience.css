@@ -1,0 +1,8 @@
+.exp{display:grid;grid-template-columns:1fr 1.25fr;background:var(--ink);color:#fff;overflow:hidden}
+.exp-text{padding:3.5rem clamp(1.2rem,4vw,3rem);align-self:center}
+.exp h2{margin-bottom:1rem}
+.exp-text p:not(.eyebrow){font-size:.95rem;margin-bottom:1.6rem;opacity:.85;max-width:420px}
+.strip{display:flex;min-height:230px}
+.strip .ph{flex:1;margin-left:-3.5%;clip-path:polygon(9% 0,100% 0,91% 100%,0 100%);transition:flex .7s var(--ease)}
+.strip .ph:hover{flex:1.6}
+.strip img{transition:transform 1s var(--ease)}.strip .ph:hover img{transform:scale(1.08)}

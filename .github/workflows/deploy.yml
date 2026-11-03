@@ -1,0 +1,60 @@
+
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Get project files
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build website
+        run: npm run build
+
+      - name: Find build folder
+        run: |
+          if [ -d "out" ]; then
+            echo "BUILD_DIR=out" >> "$GITHUB_ENV"
+          elif [ -d "dist" ]; then
+            echo "BUILD_DIR=dist" >> "$GITHUB_ENV"
+          elif [ -d "build" ]; then
+            echo "BUILD_DIR=build" >> "$GITHUB_ENV"
+          else
+            echo "No build folder found!"
+            exit 1
+          fi
+
+      - name: Setup GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload website
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ${{ env.BUILD_DIR }}
+
+      - name: Publish website
+        id: deployment
+        uses: actions/deploy-pages@v4

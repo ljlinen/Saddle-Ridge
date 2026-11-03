@@ -1,0 +1,101 @@
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  padding: 7rem clamp(1.2rem, 5vw, 4rem) 4rem;
+  background: linear-gradient(180deg, #e4e8ef 0%, #f3eee8 70%, var(--cream));
+  overflow: hidden
+}
+
+.hero-text {
+  position: relative;
+  z-index: 2;
+  max-width: 520px
+}
+
+.lead {
+  margin: 1.4rem 0 2rem;
+  max-width: 380px;
+  color: #3a3531
+}
+
+.hero-parallax {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 62%;
+  height: 78%;
+  /* will-change: transform */
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  background: none
+}
+
+.hero-img img {
+  mix-blend-mode: darken;
+  cursor: none;
+  pointer-events: none;
+  object-fit: contain;
+  object-position: right bottom;
+  animation: drift 1.4s var(--ease) both
+}
+
+@keyframes drift {
+  from {
+    opacity: 0;
+    transform: translateX(40px) scale(1.03)
+  }
+
+  to {
+    opacity: 1;
+    transform: none
+  }
+}
+
+.scroll-hint {
+  position: absolute;
+  left: clamp(1.2rem, 5vw, 4rem);
+  bottom: 1.6rem;
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+  font-size: .72rem;
+  z-index: 2
+}
+
+.mouse {
+  width: 16px;
+  height: 26px;
+  border: 1px solid var(--ink);
+  border-radius: 9px;
+  position: relative
+}
+
+.mouse::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  width: 2px;
+  height: 5px;
+  margin-left: -1px;
+  background: var(--ink);
+  border-radius: 2px;
+  animation: wheel 1.8s infinite
+}
+
+@keyframes wheel {
+  0% {
+    opacity: 1;
+    transform: none
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(8px)
+  }
+}

@@ -1,0 +1,10 @@
+.about{display:grid;grid-template-columns:1.05fr 1fr .7fr;align-items:center;gap:clamp(1.5rem,3vw,3rem);padding-right:clamp(1.2rem,4vw,3rem)}
+.about-img{height:min(34vw,420px);min-height:280px;clip-path:polygon(0 0,100% 0,88% 100%,0 100%)}
+.about-img img{transition:transform 1.2s var(--ease)}.about-img:hover img{transform:scale(1.05)}
+.about-text h2{margin-bottom:1rem}
+.about-text p:not(.eyebrow){font-size:.92rem;margin-bottom:1.5rem;max-width:420px}
+.contact{border-left:1px solid var(--line);padding:1rem 0 1rem 2rem;display:grid;gap:1.4rem}
+.row{display:flex;gap:1rem;align-items:flex-start;font-size:.9rem}
+.row svg{flex:none;fill:currentColor;stroke:none;width:28px;height:28px}
+.row a:hover{text-decoration:underline}
+.tag{font-size:.68rem;letter-spacing:.25em;border-top:1px solid var(--line);padding-top:1.2rem}

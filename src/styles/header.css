@@ -1,0 +1,15 @@
+.nav{position:fixed;inset:0 0 auto;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:2rem;padding:1.1rem clamp(1.2rem,5vw,4rem);transition:background .4s,padding .4s,box-shadow .4s}
+.nav.solid{background:rgba(250,247,244,.92);backdrop-filter:blur(12px);padding-block:.7rem;box-shadow:0 1px 0 var(--line)}
+.logo{display:flex;align-items:center;gap:.8rem}
+.logo-mark{width: 5.3rem; background: none;fill: currentColor;}
+.logo b{display:block;font-family:var(--serif);font-weight:500;font-size:1.35rem;letter-spacing:.06em}
+.logo small{display:block;font-size:.55rem;letter-spacing:.35em}
+.links{display:flex;gap:2.4rem;font-size:.9rem}
+.links a:not(.btn){position:relative;padding:.3rem 0}
+.links a:not(.btn)::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:100%;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .4s var(--ease)}
+.links a.active::after,.links a:not(.btn):hover::after{transform:scaleX(1)}
+.burger{display:none;width:40px;height:40px;position:relative;z-index:60}
+.burger span{position:absolute;left:8px;right:8px;height:1.5px;background:var(--ink);transition:transform .4s var(--ease),top .4s}
+.burger span:first-child{top:15px}.burger span:last-child{top:24px}
+.burger.open span:first-child{top:20px;transform:rotate(45deg)}
+.burger.open span:last-child{top:20px;transform:rotate(-45deg)}

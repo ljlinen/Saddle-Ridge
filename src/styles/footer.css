@@ -1,0 +1,8 @@
+.foot{background:var(--ink);color:#fff;padding:2.5rem clamp(1.2rem,4vw,3rem) 1.5rem}
+.foot-top{display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;padding-bottom:1.8rem;border-bottom:1px solid #444}
+.foot nav{display:flex;gap:2rem;font-size:.85rem;flex-wrap:wrap}
+.foot nav a{opacity:.8;transition:opacity .3s}.foot nav a:hover{opacity:1}
+.social{display:flex;gap:.8rem}
+.social a{width:38px;height:38px;border:1px solid #666;border-radius:50%;display:grid;place-items:center;transition:.3s}
+.social a:hover{background:#fff;color:var(--ink);transform:translateY(-3px)}
+.copy{text-align:center;font-size:.75rem;opacity:.7;margin-top:1.3rem}
