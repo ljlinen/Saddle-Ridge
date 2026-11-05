@@ -35,7 +35,8 @@
   background: none
 }
 
-.hero-img img {
+.hero-img img,
+video.hero-img {
   mix-blend-mode: darken;
   cursor: none;
   pointer-events: none;

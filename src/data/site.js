@@ -42,7 +42,7 @@ export const contact = {
   mapsUrl: 'https://maps.google.com/?q=149+Bosuil+Road+Kameeldrift+East+Pretoria',
   phone: '076 362 9038',
   phoneHref: 'tel:+27763629038',
-  tag: 'RIDE • RELAX • CONNECT',
+  tag: 'RIDE • LEARN • CONNECT',
 };
 
 export const experience = {
