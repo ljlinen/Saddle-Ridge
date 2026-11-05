@@ -11,12 +11,16 @@ export const nav = [
 
 // Files live in /public/images
 const img = name => `${import.meta.env.BASE_URL}images/${name}`;
+const video = name => `${import.meta.env.BASE_URL}videos/${name}`;
 
 export const images = {
   logo: img('logo.svg'),
-  hero: img('hero-horses.jpg'),
-  about: img('about-horse.jpg'),
-  gallery: [img('gallery-1.jpg'), img('gallery-2.jpg'), img('gallery-3.jpg')],
+  about: img('about-horse.webp'),
+  gallery: [img('gallery-1.webp'), img('gallery-2.webp'), img('gallery-3.webp')],
+};
+
+export const videos = {
+  hero: video('hero-horses.webm'),
 };
 
 export const hero = {

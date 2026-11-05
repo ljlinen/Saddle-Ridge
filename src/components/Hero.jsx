@@ -1,9 +1,8 @@
 import { useEffect, useRef } from 'react';
-import { hero, images } from '../data/site';
+import { hero, images, videos } from '../data/site';
 import Reveal from './Reveal';
 import Button from './Button';
 import SmartImage from './SmartImage';
-import HorsesVid from "/videos/hero-horses.mp4"
 
 export default function Hero() {
   const parallax = useRef(null);
@@ -28,7 +27,7 @@ export default function Hero() {
       </div>
       <div ref={parallax} className="hero-parallax">
         {/* <SmartImage src={images.hero} alt="Saddled horses" className="hero-img" /> */}
-        <video src={HorsesVid} alt="Saddled horses" className="hero-img" loop mute autoPlay/>
+        <video src={videos.hero} alt="Saddled horses" className="hero-img" autoPlay muted loop playsInline />
 
       </div>
       <a href="#services" className="scroll-hint"><span className="mouse" />Scroll Down</a>
