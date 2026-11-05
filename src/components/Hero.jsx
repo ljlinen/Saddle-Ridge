@@ -3,7 +3,7 @@ import { hero, images } from '../data/site';
 import Reveal from './Reveal';
 import Button from './Button';
 import SmartImage from './SmartImage';
-import HorsesVid from "/images/hero-horses.mp4"
+import HorsesVid from "/videos/hero-horses.mp4"
 
 export default function Hero() {
   const parallax = useRef(null);
